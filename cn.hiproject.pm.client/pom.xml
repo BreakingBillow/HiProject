@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>cn.hiproject.pm</groupId>
+    <artifactId>cn.hiproject.pm</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <relativePath>../cn.hiproject.pm/pom.xml</relativePath>
+  </parent>
+
+  <artifactId>cn.hiproject.pm.client</artifactId>
+
+  <name>Hi Project Management Client</name>
+
+  <dependencies>
+    <dependency>
+      <artifactId>org.eclipse.scout.rt.client</artifactId>
+      <groupId>org.eclipse.scout.rt</groupId>
+    </dependency>
+    <dependency>
+      <groupId>cn.hiproject.pm</groupId>
+      <artifactId>cn.hiproject.pm.shared</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.eclipse.scout.rt</groupId>
+      <artifactId>org.eclipse.scout.rt.client.test</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+</project>
