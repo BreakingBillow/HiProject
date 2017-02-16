@@ -2,12 +2,12 @@ package cn.hiproject.pm.client.project;
 
 import java.util.List;
 
-import org.eclipse.scout.rt.platform.Order;
 import org.eclipse.scout.rt.client.ui.desktop.outline.AbstractOutline;
 import org.eclipse.scout.rt.client.ui.desktop.outline.pages.IPage;
+import org.eclipse.scout.rt.platform.Order;
 import org.eclipse.scout.rt.shared.TEXTS;
 
-
+import cn.hiproject.pm.client.acount.AccountTablePage;
 import cn.hiproject.pm.shared.Icons;
 
 /**
@@ -22,6 +22,7 @@ public class HiProjectOutline extends AbstractOutline {
 	protected void execCreateChildPages(List<IPage<?>> pageList) {
 		super.execCreateChildPages(pageList);
 		//pageList.add(new HelloWorldPage());
+		pageList.add(new AccountTablePage());
 	}
 
 	@Override
