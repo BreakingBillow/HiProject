@@ -26,6 +26,11 @@ public class AccountTablePage extends AbstractPageWithTable<Table> {
 	}
 
 	@Override
+	protected boolean getConfiguredLeaf() {
+		return true;
+	}
+
+	@Override
 	protected void execLoadData(SearchFilter filter) {
 		importPageData(BEANS.get(IAccountService.class).getAccountTableData(filter));
 	}
@@ -173,7 +178,7 @@ public class AccountTablePage extends AbstractPageWithTable<Table> {
 			protected boolean getConfiguredDisplayable() {
 				return false;
 			}
-			
+
 			@Override
 			protected int getConfiguredWidth() {
 				return 100;
@@ -192,8 +197,6 @@ public class AccountTablePage extends AbstractPageWithTable<Table> {
 				return 100;
 			}
 		}
-		
-		
 
 	}
 }
