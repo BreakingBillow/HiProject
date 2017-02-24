@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<classPathEntry location="E:\mysql-connector-java-5.1.38.jar" />
+	<context id="context1">
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"
+			connectionURL="jdbc:mysql://localhost:3306/hiproject" userId="root" password="bluerodeo" />
+		<javaModelGenerator targetPackage="cn.hiproject.pm.server.mybatis.model"
+			targetProject="cn.hiproject.pm.server" />
+		<sqlMapGenerator targetPackage="cn.hiproject.pm.server.mybatis.mapper" targetProject="cn.hiproject.pm.server" />
+		<javaClientGenerator targetPackage="cn.hiproject.pm.server.mybatis.dao"
+			targetProject="cn.hiproject.pm.server" type="XMLMAPPER" />
+		<table schema="hiproject" tableName="account">
+		</table>
+	</context>
+</generatorConfiguration>

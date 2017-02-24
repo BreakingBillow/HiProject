@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Feb 17 16:53:39 CST 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-015a-4b46-dc0b-0000088d49b8 
+on database directory memory:D:\Git\HiProject\cn.hiproject.pm.server.app.dev\projects-database with class loader sun.misc.Launcher$AppClassLoader@232204a1 
+Loaded from file:/C:/Users/hwu/.m2/repository/org/apache/derby/derby/10.11.1.1/derby-10.11.1.1.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.8.0_101-b13
+user.dir=D:\Git\HiProject\cn.hiproject.pm.server.app.dev
+os.name=Windows 7
+os.arch=amd64
+os.version=6.1
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
