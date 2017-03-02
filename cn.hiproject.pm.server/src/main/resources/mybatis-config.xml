@@ -6,7 +6,7 @@
  
  <!-- 配置别名 -->
  <typeAliases> 
-  <typeAlias alias="Account" type="cn.hiproject.pm.server.mybatis.model"/> 
+  <typeAlias alias="Account" type="cn.hiproject.pm.server.mybatis.model.Account"/> 
  </typeAliases> 
  
  <!-- 数据库配置信息 -->
@@ -24,6 +24,6 @@
   
  <!-- 映射文件 -->
  <mappers>
- <mapper resource="cn/hiporject/pm/server.mybatis/mapper/AccountMapper.xml"/>
+ <mapper resource="cn/hiproject/pm/server/mybatis/mapper/AccountMapper.xml"/>
  </mappers>
 </configuration>
