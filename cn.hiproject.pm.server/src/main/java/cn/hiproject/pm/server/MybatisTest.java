@@ -5,11 +5,13 @@ import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
+import org.dozer.DozerBeanMapper;
 
 import cn.hiproject.pm.server.mybatis.common.MybatisUtils;
 import cn.hiproject.pm.server.mybatis.dao.AccountMapper;
 import cn.hiproject.pm.server.mybatis.model.Account;
 import cn.hiproject.pm.server.mybatis.model.AccountExample;
+import cn.hiproject.pm.shared.acount.AccountTablePageData.AccountTableRowData;
 
 public class MybatisTest {
 
@@ -21,7 +23,7 @@ public class MybatisTest {
 		sqlSessionFactory = MybatisUtils.getSqlSessionFactory();
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		
-		List accountList = new ArrayList<Account>();
+		List<Account> accountList = new ArrayList<Account>();
 		
 		try {
 			//Visitor visitor = (Visitor) session.selectOne("david.mybatis.demo.IVisitorOperation.basicQuery", id);
@@ -33,10 +35,23 @@ public class MybatisTest {
 		
 			System.out.println(accountList);
 			
-			sqlSession.close();
+			for (Account a : accountList) {
+				System.out.println(a.getAccountName());
+				
+				AccountTableRowData b = new AccountTableRowData();
+				
+				DozerBeanMapper mapper = new DozerBeanMapper();  
+				List<String> mappers = new ArrayList<String>();  
+			    mappers.add("dozer/accountMapper.xml");  
+			    mapper.setMappingFiles(mappers);
+			    
+			    mapper.map(a, b);
+			    System.out.println(b.getAccountName());
+			}
 
 		} catch (Exception e) {
 			// TODO: handle exception
+			e.printStackTrace();
 			
 		} finally {
 			sqlSession.close();
